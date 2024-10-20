@@ -9,12 +9,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String? selectedCity;
     TextEditingController searchCity = TextEditingController();
     TextEditingController searchCountry = TextEditingController();
     TextEditingController searchState = TextEditingController();
     return Scaffold(
-        body: SafeArea(
+        body: SingleChildScrollView(
       child: Column(
         children: [
           VerticalSpacing(height: 20.0),
@@ -30,7 +29,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-          VerticalSpacing(height: 20.0),
+          VerticalSpacing(height: 10.0),
           Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: CountryStateCityPicker(
@@ -75,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushNamed(
                   context,
                   '/result',
-                  arguments: ResultScreen(cityName: 'karachi'),
+                  arguments: const ResultScreen(cityName: 'karachi'),
                 );
               },
               child: Container(
@@ -109,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushNamed(
                   context,
                   '/result',
-                  arguments: ResultScreen(cityName: 'islamabad'),
+                  arguments: const ResultScreen(cityName: 'islamabad'),
                 );
               },
               child: Container(
@@ -143,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushNamed(
                   context,
                   '/result',
-                  arguments: ResultScreen(cityName: 'lahore'),
+                  arguments: const ResultScreen(cityName: 'lahore'),
                 );
               },
               child: Container(

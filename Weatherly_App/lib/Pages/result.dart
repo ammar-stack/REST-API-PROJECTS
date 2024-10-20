@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:weather_app_new/Components/spacing.dart';
@@ -9,7 +8,7 @@ import 'package:weather_app_new/Models/getdata_model.dart';
 
 class ResultScreen extends StatefulWidget {
   final String? cityName;
-  ResultScreen({super.key, this.cityName});
+  const ResultScreen({super.key, this.cityName});
 
   @override
   State<ResultScreen> createState() => _ResultScreenState();
